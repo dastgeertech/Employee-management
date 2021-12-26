@@ -1,0 +1,25 @@
+<div class="container mt-4">
+    <form [formGroup]="addEmployee" (ngSubmit)="addData()">
+        <!-- <div class="form-group">
+          <label for="exampleFormControlInput1">Emp_ID</label>
+          <input type="id" class="form-control"  placeholder="ID">
+        </div> -->
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Name</label>
+            <input type="name" class="form-control" formControlName="name" placeholder="Name">
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Location</label>
+            <input type="location_city" class="form-control" formControlName="location" placeholder="Location">
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Email address</label>
+            <input type="email" class="form-control" formControlName="email" placeholder="name@example.com">
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Phone_number</label>
+            <input type="phone" class="form-control" formControlName="mobile" placeholder="Phone_number">
+          </div>
+          <button class="btn btn-primary" type="submit">Adddata</button>
+      </form>
+    </div>

@@ -1,0 +1,60 @@
+
+<div class="container mt-4">
+  <input [(ngModel)]="term" placeholder="search text goes here">
+<div class="card" >
+    <div class="table-responsive">
+      <table class="table align-items-center mb-0" >
+        <thead>
+          <tr>
+            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Emp_ID</th>
+            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Name</th>
+            <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Location</th>
+            <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Email</th>
+            <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Mobile</th>
+            <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">delete</th>
+            <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">View</th>
+            <th class="text-secondary opacity-7">Edit</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let employee of employees | filter: term">
+          <tr>
+            <td>
+              <div class="d-flex px-2 py-1">
+                <div>
+                  <img src="https://demos.creative-tim.com/soft-ui-design-system-pro/assets/img/team-2.jpg" class="avatar avatar-sm me-3">
+                </div>
+                <div class="d-flex flex-column justify-content-center">
+                  <h6 class="mb-0 text-xs">{{employee.id}}</h6>
+                </div>
+              </div>
+            </td>
+            <td>
+              <p class="text-xs font-weight-bold mb-0">{{employee.name}}</p>
+            </td>
+            <td class="align-middle text-center text-sm">
+              <span class="text-xs font-weight-bold mb-0">{{employee.location}}</span>
+            </td>
+            <td class="align-middle text-center">
+              <span class="text-secondary text-xs font-weight-bold">{{employee.email}}</span>
+            </td>
+            <td class="align-middle text-center">
+                <span class="text-secondary text-xs font-weight-bold">{{employee.mobile}}</span>
+              </td>
+              <td class="align-middle text-center">
+                <a class="badge bg-gradient-warning" data-original-title="delete user" [routerLink]="['/deleteemployee',employee.id]">Delete</a>
+              </td>
+              <td class="align-middle text-center">
+                <a class="badge bg-gradient-info" [routerLink]="['/details',employee.id]">View</a>
+              </td>
+            <td class="align-middle text-center">
+              <a class="badge bg-gradient-primary" data-toggle="tooltip" data-original-title="Edit user" [routerLink]="['/edit', employee.id]">
+                Edit
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+</div>

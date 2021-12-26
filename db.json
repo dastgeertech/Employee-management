@@ -1,0 +1,49 @@
+{
+  "employees": [
+    {
+      "name": "arslan",
+      "location": "karachi",
+      "email": "arslan@mail.com",
+      "mobile": "923008x00000",
+      "id": 2
+    },
+    {
+      "name": "toqueer",
+      "location": "Islamabad",
+      "email": "toqueer@gmail.com",
+      "mobile": "92300xxxxxxx",
+      "id": 3
+    },
+    {
+      "name": "dastgeer",
+      "location": "lahore",
+      "email": "rai@gmail.com",
+      "mobile": "92308xxxx",
+      "id": 4
+    },
+    {
+      "name": "dsdjks",
+      "location": "kncksdn",
+      "email": "cnsdjcn@mail.com",
+      "mobile": "123813091",
+      "id": 5
+    },
+    {
+      "name": "dastgeer",
+      "location": "lahore",
+      "email": "dastgeer@gmail.com",
+      "mobile": "9230000xxxxxx",
+      "id": 7
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

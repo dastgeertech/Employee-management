@@ -1,0 +1,32 @@
+<!-- <nav aria-label="Page navigation example" >
+    <ul class="pagination justify-content-center mt-4">
+      <li class="page-item disabled" (click)="selectPage(1, $event)" [class.disabled]="currentPage == 1">
+        <a class="page-link" href="javascript:;" tabindex="-1">
+          <i class="fa fa-angle-left"></i>
+          <span class="sr-only">Previous</span>
+        </a>
+      </li>
+      <li class="page-item" [class.active]="page == currentPage" *ngFor="let page of pages | async"><a class="page-link" (click)="selectPage(page, $event)">{{page}}</a></li>
+      <li class="page-item active" (click)="cancelEvent($event)" *ngIf="(currentPage + range) < totalPages"><a class="page-link" href="javascript:;">...</a></li>
+      <li class="page-item" (click)="selectPage(totalPages, $event)"  [class.disabled]="currentPage == totalPages">
+        <a class="page-link" href="javascript:;">
+          <i class="fa fa-angle-right"></i>
+          <span class="sr-only">Next</span>
+        </a>
+      </li>
+    </ul>
+  </nav> -->
+
+  <div *ngFor="let item of items; let i = index;" (click)="onClick(item)">
+    <span *ngIf="i >= startIndex && i <= endIndex">{{getLabel(i)}}</span>
+  </div>
+  
+  <div *ngIf="pages.length > 1">
+    <a href="" (click)="previous($event)">{{ previousLabel }}</a>
+    <span *ngFor="let page of pages">
+      <span *ngIf="page === currentPage" href="" (click)="setCurrent($event,page)">{{page}}</span>
+      <a *ngIf="page !== currentPage" href="" (click)="setCurrent($event,page)">{{page}}</a>
+    </span>
+    <a href="" (click)="next($event)">{{ nextLabel }}</a>
+  </div>
+  

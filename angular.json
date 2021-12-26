@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "04844357-cc4a-43bd-95a6-81337808f001"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -27,9 +30,17 @@
               "src/assets"
             ],
             "styles": [
+              "src/assets/css/nucleo-icons.css",
+              "src/assets/css/soft-design-system.css",
+              "src/assets/css/soft-design-system.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/soft-design-system.js",
+              "src/assets/js/soft-design-system.min.js",
+              "src/assets/js/core/bootstrap.min.js",
+              "src/assets/js/core/popper.min.js"
+            ]
           },
           "configurations": {
             "production": {
